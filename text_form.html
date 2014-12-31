@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>
+		Form javascript
+		</title>
+	</head>
+	<body>
+	<form action='' method='post' name='form1' onsubmit="valid()">
+		Enter Name<input type='text' name='txt_name'>
+		<br>
+		<input type='submit' name='save' value='Click'>
+	</form>
+	</body>
+</html>
+
+<script language='javascript'>
+	function valid()
+	{
+	if(document.form1.txt_name.value=='')
+		{
+		alert('please enter the name');
+		}
+		else
+		{
+	var name=document.form1.txt_name.value;
+	alert('Your name is ' + name);
+	}
+	}
+</script>

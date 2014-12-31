@@ -1,0 +1,25 @@
+<html>
+<head>
+<script language="javascript">
+	function fc(){
+		var a=document.getElementById("t").value;
+		var b=1,r;
+			while(a>0){
+				b=b*a; //updating value of b by multiplying a
+				a--;  //decrementing value of a by 1 to 0
+			}
+		document.getElementById("pp").innerHTML+=" "+b;
+	}
+
+</script>
+</head>
+
+<body>
+	  <input type ="text" id="t" >
+	  <input type='button' value='calculate' onclick='fc();'><p id='pp'>your result is = </p>
+<br />
+	 <br>
+	 Powered by <a href="http://www.socioteachers.com">SocioTeachers.com</a><br>
+	 Developed by:<br><img src="C:\Users\Muhammad Imran\Desktop\BOOKS\4th SEMESTER\Web Engineering\HTML LECTURES\javascript\asad.gif">
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>changing colors of div area through javascript</title>
+		<script language="javascript">
+			function slcc(){
+			var clr=document.getElementById("r").value;
+				document.getElementById("dv").style.backgroundColor=clr;				
+			}
+		</script>
+	</head>
+	<body><form method='post' action=''>
+		<div id="dv" style="height:90%; width:100%;">Hello i am in div</div>Change the color of background<br />
+				
+		<select  onchange=slcc() id ='r'>
+			<option >red</option>
+			<option >yellow</option>
+			<option >green</option>
+			<option >blue</option>
+			<option >pink</option>
+			<option >dark</option>
+			<option >white</option>
+		</select>
+		
+		
+	</form></body>
+</html>

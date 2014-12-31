@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>My Simple calc
+		</title>
+		<style type="text/css">
+			#nnn {
+			position:absolute;
+			top:37%;
+			left:43%;
+			border-radius:25px;
+			color:green;
+			border:45px;
+			border-color:grey;
+			}
+		</style>
+		<script language="javascript">
+		function cd(val)
+			{
+				document.getElementById("d").value=val;
+			}
+		function v(val)
+			{
+				document.getElementById("d").value+=val;
+			}
+		function e() 
+			{ 
+				try 
+					{ 
+						cd(eval(document.getElementById("d").value)) 
+					} 
+					catch(e) 
+					{
+						cd('Error') 
+					} 
+			}
+		function rst(){
+				document.getElementById("d").value="";
+			}
+</script>
+		
+	</head>
+	
+<body><form method="post"><table id = "nnn" border="45"><tr><td>
+
+<input type="text" readonly size="18" id="d" onclick="rst();">
+
+    <p>
+		<input type="button"  value="            /            " onclick='v("/")'>
+	</p>
+    <p>
+		<input type="button"  value="7" onclick='v("7")'>
+		<input type="button" value="8" onclick='v("8")'>
+		<input type="button" value="9" onclick='v("9")'>
+		<input type="button" value="*" onclick='v("*")'>
+	</p>
+    <p>
+		<input type="button" value="4" onclick='v("4")'>
+		<input type="button" value="5" onclick='v("5")'>
+		<input type="button" value="6" onclick='v("6")'>
+		<input type="button" value="-" onclick='v("-")'>
+	</p>
+    <p>
+		<input type="button" value="1" onclick='v("1")'>
+		<input type="button" value="2" onclick='v("2")'>
+		<input type="button" value="3" onclick='v("3")'>
+		<input type="button" value="+" onclick='v("+")'>
+	</p>
+    <p>
+		<input type="button" value="0" onclick='v("0")'>
+		<input type="button" value="." onclick='v(".")'>
+		<input type="button" value="C" onclick='cd("")'>
+		<input type="button" value="=" onclick='e()'>
+	</p>
+
+
+</tr></td></table></form></body>
+</html>

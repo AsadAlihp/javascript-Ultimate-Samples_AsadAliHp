@@ -1,0 +1,64 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="JavaScript">
+	
+		var valu=prompt("Enter your first number", "");
+		var valu2=prompt("Enter your second number here", "");
+		var op=prompt("Please Enter your operator here to apply on your numbers", "");
+		
+			var a=parseInt(valu);
+			var b=parseInt(valu2);
+			
+			alert(Add(a,b));
+			
+			
+		function Add(a,b)
+{
+   var result = null;
+
+   if (isNaN(a) || isNaN(b))
+   {
+      alert("Oh my God, Please send only numbers why don't you understand??? haaaN??????????");
+      return;
+   }
+   else{
+
+   
+
+		switch(op)
+		{
+		case '+':
+		alert("your answer is " + (a+b));
+		break;
+		
+		case '-':
+		alert("your subtraction aswer is " + (a-b));
+		break;
+		
+		case '/':
+		alert("Your division answer is " + (a/b));
+		break;
+		
+		case '*':
+		alert("Your multiplication answer is " + (a*b));
+		break;
+		
+		default:
+		alert("you put an invalid operator please refresh your page to continoue your calculation, Or if you want something else from this calc then Ask it on socioteachers.com.. Thanks ");
+		
+		}
+		
+		}
+		return op;
+		}
+		
+	</script>
+</head>
+
+	
+
+
+<body>
+
+</body>
+</html>

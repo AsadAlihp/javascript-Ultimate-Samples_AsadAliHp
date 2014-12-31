@@ -1,0 +1,45 @@
+	var arr= new Array();
+	var a=0;
+	function insertion(){
+		while(a<6){
+		arr[a]=parseInt(document.getElementById("txt"+a).value);
+		
+		a++;
+		}
+		insertion_sort();
+		var aaa;
+		 for (aaa=0;aaa<6;aaa++){
+	document.getElementById("txt"+aaa).value=arr[aaa];
+	}//end of while loop
+	}
+	
+	function insertion_sort() {
+	var aa,bb=0;
+	 var i, j ,tmp;
+		for (i = 1; i < 6; i++) {
+ 			j = i;
+ 			while (j > 0 && arr[j - 1] > arr[j]) {
+				tmp = arr[j];
+ 				arr[j] = arr[j - 1];
+				 arr[j - 1] = tmp;	
+				 j--;
+				}//end of while loop
+				
+			for(aa=0;aa<6;aa++){
+				document.getElementById("p").innerHTML+="-<["+arr[aa]+"]>-";
+				}
+			document.getElementById("p").innerHTML+="this was step num"+bb+"] of outer loop(for) & is getting ready 4 comingUp nxt i =["+bb+"] Listen The element which is compared is ["+arr[bb]+"] and movd to box num ["+(bb+1)+"], <br />";
+		bb++;
+	}	
+}
+////https://drive.google.com/file/d/0B5_1l7pbvNkDdnprZkRsLTljTjg/edit?usp=sharing
+	
+	
+	/*
+	PROGRAMMER ASAD ALI:
+	POWERED BY SOCIOTEACHERS.COM
+	PLEASE LIKE, SHARE, LEAVE COMMENTS IF YOU LIKED
+	THANKS..
+	Date:---sUNDAY, MARCH, 16, 2014
+	Time  10:30 pm...
+	*/

@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<style type ="text/css">
+			#calc {
+				position:absolute;
+				top:40%;
+				left:30%;
+				}
+			#b {
+				position:absolute;
+				left:25%;
+				}
+		</style>
+<script language = "javascript">
+	<!--//   RESET VALUES OF TEXTBOXES FUNCTIONS //-->
+	function rst(){
+		document.frm1.n1.value="";
+		}
+	function rst1(){
+		document.frm1.op.value="";
+		}
+	function rst2(){
+		document.frm1.n2.value="";
+		}
+	
+	<!--//  CALCULATION USING SWITCH STATEMENT //-->
+	
+	
+	function tv(a,b)
+		{   <!--//   DECLARATION OF VARIABLES //-->
+			var a = parseInt(document.frm1.n1.value);
+			var b = parseInt(document.frm1.n2.value);
+			var op = document.frm1.op.value;
+
+   if (isNaN(a) || isNaN(b))
+	{
+		alert("Oh my God, Please send only numbers why don't you understand??? haaaN??????????");
+      return;
+	}
+   else{
+		switch(op)
+			{
+				case '+':
+					document.frm1.n3.value=a+b;
+				break;
+		
+				case '-':
+					document.frm1.n3.value=a-b;
+				break;
+			
+				case '/':
+					document.frm1.n3.value=a/b;
+				break;
+		
+				case '*':
+					document.frm1.n3.value=a*b;
+				break;
+		
+				default:
+					alert("you put an invalid operator please refresh your page to continoue your calculation, Or if you want something else from this calc then Ask it on socioteachers.com.. Thanks ");
+			}
+		
+		}
+	return op;
+}
+	
+	
+</script>
+</head>
+<body><form method = "post" name = "frm1"><div id = "calc">
+		<input type = "text" value = "Enter Your first number" name = "n1" onclick = "rst();">
+		<input type = "text" name = "op" onclick = "rst1();" value = "Enter Your Operator">
+		<input type = "text" name = "n2" onclick = "rst2();" value = "Enter your 2nd number"><br>
+	<div id="b"><input type = "button" name = "btn" value = "calculate" onclick="tv();">
+		<input type = "text" name = "n3" value = "your result will be shown here" readonly></div>
+	</div>
+</form>
+</body>
+</html>

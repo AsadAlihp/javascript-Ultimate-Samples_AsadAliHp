@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form method='post' action=''>
+<h1>The isNaN() function returns true if the value is NaN (Not-a-Number), and false if not.</h1>
+
+
+numbers
+	<input type="text" value="Numberzzz" id='txt' onkeyup= "myFunction();" onclick="rst('1');">
+<br/>
+Alphabets
+	<input type="text" value="Only Alphabelts" id='txt2' onkeyup= "myFunction();" onclick="rst('2');">
+	<input type="button" id="b" onclick=dtct() onclick=chkr() value="click me to make sure that the values provided are valid by most secure detector">
+<br />
+	<a href="http://www.socioteachers.com">
+	<input type="button" value="click me to go on site"></a>
+</form>
+
+
+
+<!--*********************/////**********/////////****
+              JAVASCRIPT:::::\\\
+			  Programmed by Asad
+					/////  \\\\\\
+				   /////	\\\\\\
+			   	  /////		 \\\\\\
+				 /////@ \\\\\\\\\\\\
+				/////			\\\\\
+			   /////			 \\\\\		
+****/////////*********////////////***********///////-->
+
+
+<script>
+	
+	function myFunction()
+		{
+			var aa=document.getElementById("txt").value, bb=document.getElementById("txt2").value;
+		if (isNaN(aa)){
+				document.getElementById("txt").value="";
+			}else if(!isNaN(bb)){
+				document.getElementById("txt2").value="";
+			}
+		}
+	function rst(val){
+		if(val==1){
+			return document.getElementById("txt").value="";
+		}else{
+			return document.getElementById("txt2").value="";
+		}
+	}
+	
+	//
+	function chkr(){
+		if (isNaN(document.getElementById("txt").value)){
+			alert("please enter numeric");
+			rst();
+				return false;
+				}
+	}
+	
+	
+	function dtct(){
+			var aa=document.getElementById("txt").value;
+			var bb=document.getElementById("txt2").value;
+		if (isNaN(aa)){
+				document.getElementById("txt").value="";
+			}else if(!isNaN(bb)){
+				document.getElementById("txt2").value="";
+			}
+		}
+		
+/*
+code downloaded from SocioTeachers.com... feel free to ask questions if you have one
+
+*/
+
+
+</script>
+
+</body>
+</html>
+<!--below is some extra code for most secure detection, you can delete  this afterwords doesn't matter..
+<script language="javascript">
+	function dtct(){
+		if(isNaN(document.getElementById("txt").value)!=true){
+		alert("Check... dont provide numeric in name text field..Only alphabets are allowed..");
+		document.getElementById("txt").focus;
+		}else if(isNaN(document.getElementById("txt2").value==true){
+		alert("Check... dont provide Alphabets in age field..Only numeric values are allowed..");
+		document.getElementById("txt2").focus;
+		}
+		
+		
+	}
+</script>

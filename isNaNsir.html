@@ -1,0 +1,20 @@
+<html>
+<head>
+	<script language="javascript">
+		function chkr2(){
+			if (isNaN(document.getElementById("txt").value)){
+				document.getElementById("txt").value="";
+				
+			}else if (!isNaN(document.getElementById("txt1").value)){
+				document.getElementById("txt1").value="";
+			}
+		}
+	</script>
+
+</head>
+<!--***********************Html body starts***********************-->
+<body>
+		<input type='text' id='txt' value="number" onkeyup=chkr2()>
+		<input type='text' id='txt1' value="abc" onkeyup=chkr2()>
+</body>
+</html>

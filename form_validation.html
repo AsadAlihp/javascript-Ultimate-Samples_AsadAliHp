@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>
+		Form Validation
+		</title>
+	</head>
+	<body>
+		<form action='' method='post' name='form1' onsubmit='return valid()'>
+			Password <input type='password' name='pass1'>
+			<br>
+			Confirm Password <input type='password' name='pass2'>
+			<br>
+			<input type='submit' name='save' value='Confirm'>
+		</form>
+	</body>
+</html>	
+	<script language='javascript'>
+		function valid()
+		{
+			if(document.form1.pass1.value!=document.form1.pass2.value){
+			alert('Password fields does not match');
+				}
+				else{
+					document.write('password fields matches');
+					return false;
+				}
+		}
+	</script>

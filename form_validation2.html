@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>
+		Form Validation
+		</title>
+	</head>
+	<body>
+		<form action='' method='post' name='form1' onsubmit='return valid()'>
+			Name <input type='text' name='txt'>
+			<br>
+			 Password <input type='password' name='pass'>
+			<br>
+			<input type='submit' name='save' value='Login'>
+		</form>
+	</body>
+	
+	<script language='javascript'>
+		function valid()
+			{
+			if(document.form1.txt.value=='')
+				{
+				alert('please enter the name');
+				document.form1.txt.focus();
+				return false;
+				}
+				
+			if(document.form1.pass.value=='')
+				{
+				alert('Please enter the password');
+				document.form1.pass.focus();
+				return false;
+				}
+			return true;	
+			}
+	</script>
+	
+	
+	
+	
+	

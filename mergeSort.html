@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<body><head>
+<script type="text/javascript">
+////////////////////////////////////DIVIDER  STARTS/////////////
+ // var a[50];
+  var a = new Array();
+   // void merge(var,var,var);     //FUNCTION DECLARATION
+  /*  function merge_sort(var low,var high)
+       {
+         var mid;
+            if(low<high)
+               {
+                 mid=(low+high)/2; //Dividing list.
+                 merge_sort(low,mid); //makE sub part. division of SUBparts.left side. till list is un divisable (recursive call)
+                 merge_sort(mid+1,high); //same as above line but this is for right side, mean <span class="nm2ne42" id="nm2ne42_5">mid povar</span> > and < high.
+                 merge(low,mid,high); //calling the function to merge or construct which we've distructed right now.(sort)
+                }
+         }
+     function merge(var low,var mid,var high)
+{}
+*/
+
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+
+
+	var arr= new Array();
+	var a=0;
+	function mergeSort(){
+		while(a<6){
+			arr[a]=parseInt(document.getElementById("txt"+a).value);
+			
+			a++;
+			}
+			merge_sort();
+			var aaa;
+			 for (aaa=0;aaa<6;aaa++){
+		document.getElementById("txt"+aaa).value=arr[aaa];
+		}//end of while loop
+	}
+	
+	
+		    function merge_sort(var low,var high)
+			   {
+				 var mid;
+					if(low<high)
+					   {
+						 mid=parseInt((low+high)/2); //Dividing list.
+						 merge_sort(parseInt(low),parseInt(mid)); //makE sub part. division of SUBparts.left side. till list is un divisable (recursive call)
+						 merge_sort(parseInt(mid+1),parseInt(high)); //same as above line but this is for right side, mean <span class="nm2ne42" id="nm2ne42_5">mid povar</span> > and < high.
+						 merge(low,mid,high); //calling the function to merge or construct which we've distructed right now.(sort)
+						}
+				 }
+     function merge(var low,var mid,var high)
+         {
+           var h,i,j,b[50],k;
+           h=low;
+           i=low;
+           j=mid+1;
+              while((h<=mid)&&(j<=high))
+                 {
+                   if(a[h]<=a[j])
+                     {
+                        b[i]=a[h];
+                        h++;
+                      }
+                    else
+                      {
+                        b[i]=a[j];
+                        j++;
+                       }
+                      i++;
+                  }
+                   if(h>mid)
+                     {
+                       for(k=j;k<=high;k++)
+                         {
+                           b[i]=a[k];
+                           i++;
+                          }
+                      }
+                    else
+                      {
+                        for(k=h;k<=mid;k++)
+                           {
+                             b[i]=a[k];
+                             i++;
+                           }
+                       }
+                for(k=low;k<=high;k++) a[k]=b[k];
+              }
+}
+	
+	//download link//https://drive.google.com/file/d/0B5_1l7pbvNkDdnprZkRsLTljTjg/edit?usp=sharing
+	/*
+	PROGRAMMER ASAD ALI:
+	POWERED BY SOCIOTEACHERS.COM
+	PLEASE LIKE, SHARE, LEAVE COMMENTS IF YOU LIKED
+	THANKS..
+	Date:---sUNDAY, MARCH, 16, 2014
+	Time  10:30 pm...
+	*/
+	
+</script></head>
+<body>
+<input type='text' id='txt0' ><input type='text' id='txt1' >
+<input type='text' id='txt2' ><input type='text' id='txt3' >
+<input type='text' id='txt4' ><input type='text' id='txt5' >
+<br />
+<input type = "button" id ='b' onclick= "mergeSort(1, 6);" value="SORT">
+<p id ='p'>description....<br /></p>
+</body>
+</html>
